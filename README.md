@@ -8,6 +8,8 @@ Java 21, Maven, Serenity BDD 5.3.8, Selenium WebDriver, Cucumber 7.34.2 y Screen
 
 El Excel está en `entrega/PTP_Juan_Vanegas_23102026.xlsx`. Contiene alcance, los tres casos, riesgos/defectos y la celda para el repositorio.
 
+Las celdas azules de evidencia son enlaces a resultados, acta, defectos o capturas específicas. Cada caso incluye un índice de evidencias al final. Las capturas de registro, carrito y checkout también están incorporadas en el Excel, para consultarlas sin navegar por el código. El acta describe los pasos ejecutados y lo observado; el reporte técnico interactivo de Serenity se abre localmente tras descargar el repositorio, como explica el propio Excel.
+
 Se creó una cuenta real con autorización del candidato mediante automatización de navegador. Se verificó el reingreso, se modificó temporalmente el nombre y se comprobó su persistencia tras reautenticarse. El nombre original quedó restaurado. Se verificaron producto, talla 37, dos unidades, subtotal y checkout reales.
 
 **La compra completa sigue pendiente:** el botón «Registrar orden» genera una orden del comercio. No se pulsó; no se pagó ni se reservó producto. No se proporcionó pago sandbox ni datos completos de facturación. Llegar al checkout no equivale a una compra confirmada.

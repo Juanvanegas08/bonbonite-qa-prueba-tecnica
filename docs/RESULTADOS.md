@@ -56,3 +56,5 @@ Repositorio público de entrega: https://github.com/Juanvanegas08/bonbonite-qa-p
 Se compiló y ejecutó una copia limpia del código: `mvn clean verify` seleccionó por defecto los tres casos DEMO y terminó con BUILD SUCCESS (3/3 aprobados). La selección explícita `-Dcucumber.filter.tags=@publico` también terminó con BUILD SUCCESS (1/1 aprobado). No se repitieron cambios en la cuenta real durante esta revisión.
 
 Se revisaron las seis pestañas del Excel, las capturas reales, la concordancia de los resultados con Cucumber JSON y los archivos de los reportes. Se retiraron enlaces opcionales CSV sin archivo de destino mediante `tools/finalize-report.ps1`, sin modificar los resultados de ejecución. La compra real continúa parcial y BUG-01 continúa abierto.
+
+El Excel incorpora las capturas de registro, carrito y checkout, y sustituye las referencias abreviadas de evidencia por enlaces descriptivos. El índice de cada escenario permite abrir resultados, acta, defectos y carpeta de Serenity. Se explica cómo descargar y abrir el HTML interactivo. Esta mejora de presentación conserva los resultados de las ejecuciones anteriores.
