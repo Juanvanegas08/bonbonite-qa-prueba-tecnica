@@ -1,0 +1,10 @@
+target/
+.env
+.env.*
+!.env.example
+.idea/
+.settings/
+.classpath
+.project
+*.log
+.tools/
