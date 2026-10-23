@@ -18,6 +18,8 @@ La DEMO local se conserva como soporte para practicar los tres flujos completos 
 
 ## Ejecutar en Windows
 
+`mvn clean verify` ejecuta por defecto solo los tres escenarios de la DEMO local. Las pruebas del comercio real y el registro de otra cuenta se seleccionan expresamente con sus etiquetas y precondiciones. No necesitan credenciales para revisar la DEMO.
+
 Requisitos: JDK 21, Maven 3.9.11 o superior y Chrome. En el equipo de preparación el script detecta JDK/Maven en `%LOCALAPPDATA%/Programs/QA-Tools`. En otro equipo configura JAVA_HOME y Maven en PATH. La primera ejecución descarga dependencias y ChromeDriver.
 
 ```powershell
@@ -49,6 +51,8 @@ mvn clean verify -Dcucumber.filter.tags="@real" -Dserenity.take.screenshots=DISA
 Las capturas automáticas de la ejecución real se desactivan para evitar que datos personales aparezcan en las evidencias que se publican. Se incluyen capturas del navegador sin cédula ni contraseña y un acta de pasos. Los resultados medidos están en `docs/RESULTADOS.md`.
 
 Los reportes quedan por modo en `evidencias/Demo/serenity/index.html`, `evidencias/Publico/serenity/index.html` y `evidencias/Real/serenity/index.html`. La selección de etiquetas puede mostrar escenarios omitidos en el XML de JUnit; consulta los escenarios seleccionados en Cucumber y Serenity.
+
+Descarga o clona el repositorio y abre esos archivos `index.html` desde la carpeta local; GitHub muestra el código HTML y no ejecuta el reporte. `tools/finalize-report.ps1` retira únicamente los enlaces opcionales a exportaciones CSV inexistentes. Los resultados Cucumber JSON, Failsafe XML y Serenity JSON se conservan sin cambios.
 
 ## Registro inicial de otra cuenta
 

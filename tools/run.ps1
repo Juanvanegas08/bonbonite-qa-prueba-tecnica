@@ -25,6 +25,7 @@ try {
         $reportDir=Join-Path $evidence 'serenity'
         New-Item -ItemType Directory -Path $reportDir -Force | Out-Null
         Copy-Item 'target\site\serenity\*' $reportDir -Recurse -Force
+        & (Join-Path $PSScriptRoot 'finalize-report.ps1') -ReportDir $reportDir
     }
     foreach($file in @('target\cucumber.json','target\cucumber.html')){if(Test-Path $file){Copy-Item $file $evidence -Force}}
     if(Test-Path 'target\failsafe-reports'){
