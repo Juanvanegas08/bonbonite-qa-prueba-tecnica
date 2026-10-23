@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+
+    <!-- Swiper.js local styles and script -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <script src="swiper/swiper-bundle.min.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const startIndex = parseInt(urlParams.get("screenshot")) || 0;
+
+            new Swiper('.swiper', {
+                initialSlide: startIndex,
+                effect: 'fade',
+                speed: 200,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    },
+                    dynamicBullets: true,
+                    dynamicMainBullets: 3  // Shows 3 main bullets + 2 smaller ones on sides
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .swiper {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: lightgrey;
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #007aff;
+        }
+    </style>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Bon-Bonite | Juan Vanegas | DEMO o exploración pública</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="98a2dfac7878b6a08db898b339feec4993e59dfa5d1628a9f42f50af3d98df9c.html">Modulos</a></span>
+                > <span class="truncate-60"><a
+                    href="f7f6241d85d1277acd74967d0c5079d9eea0ee887a5ac2bb6ac75b014bce2b9e.html">CAT-<id> Consultar cat&aacute;logo y producto de <modulo> </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-10-2026 18:33</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Cobertura Complementaria De Módulos Reales </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">CAT- Consultar cat&aacute;logo y producto de
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que se consulta el catálogo "&lt;ruta&gt;"<br>Entonces un producto del catálogo conserva nombre precio e imagen en su ficha</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Timeout exception: Expected condition failed: waiting for visibility of element found by By.cssSelector: h1.product_title, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {'method':'css selector','selector':'h1.product_title'}.(tried for 25 seconds with 500 milliseconds interval)Build info: version: '4.41.0', revision: '9fc754f'System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacadeBuild info: version: '4.41.0', revision: '9fc754f'System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.TimeoutException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.juanvanegas.qa.steps.ModuleSteps.product(ModuleSteps.java:16)<br />✽.un producto del catálogo conserva nombre precio e imagen en su ficha(classpath:features/modulos.feature:6)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+    <!-- Swiper Carousel -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="053450e8fa589fd001f4adf120a7b19647d5989f0e9434f876682b14f98ced45.png" title=" 1: CAT-01 Consultar cat&amp;aacute;logo y producto de Zapatos ({id=01, modulo=Zapatos, ruta=zapatos-mujer})" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="053450e8fa589fd001f4adf120a7b19647d5989f0e9434f876682b14f98ced45.png" title=" Dado que se consulta el cat&amp;aacute;logo &amp;quot;zapatos-mujer&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="c4c4a98272c8c516c8216d6b9adc6e0275d5c463af5d07c5cc9e630ea7dfa473.png" title=" Entonces un producto del cat&amp;aacute;logo conserva nombre precio e imagen en su ficha" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="c4c4a98272c8c516c8216d6b9adc6e0275d5c463af5d07c5cc9e630ea7dfa473.png" title=" 1: CAT-01 Consultar cat&amp;aacute;logo y producto de Zapatos ({id=01, modulo=Zapatos, ruta=zapatos-mujer}) (completed)" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="6b9a4d651687a0cca328c0457f838ebd5adc488db962606a090e8cb7048920d9.png" title=" 2: CAT-02 Consultar cat&amp;aacute;logo y producto de Bolsos ({id=02, modulo=Bolsos, ruta=bolsos-mujer})" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="6b9a4d651687a0cca328c0457f838ebd5adc488db962606a090e8cb7048920d9.png" title=" Dado que se consulta el cat&amp;aacute;logo &amp;quot;bolsos-mujer&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="7b5ebaa93d7458b3d360df6fac0dcb31c9b48894cf6920b1322a666fa85a0aa6.png" title=" Entonces un producto del cat&amp;aacute;logo conserva nombre precio e imagen en su ficha" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="7b5ebaa93d7458b3d360df6fac0dcb31c9b48894cf6920b1322a666fa85a0aa6.png" title=" 2: CAT-02 Consultar cat&amp;aacute;logo y producto de Bolsos ({id=02, modulo=Bolsos, ruta=bolsos-mujer}) (completed)" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="43711fe2523569b4aa97f3c3d3da038e337b6385cd940766a64e2e49a8a0cd0e.png" title=" 3: CAT-03 Consultar cat&amp;aacute;logo y producto de Cinturones ({id=03, modulo=Cinturones, ruta=cinturones-mujer})" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="43711fe2523569b4aa97f3c3d3da038e337b6385cd940766a64e2e49a8a0cd0e.png" title=" Dado que se consulta el cat&amp;aacute;logo &amp;quot;cinturones-mujer&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="3b83cfb9e27115ad86ff551bbab175740a8754bdd963f7cb3e4ba443ac90155c.png" title=" Entonces un producto del cat&amp;aacute;logo conserva nombre precio e imagen en su ficha" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="3b83cfb9e27115ad86ff551bbab175740a8754bdd963f7cb3e4ba443ac90155c.png" title=" 3: CAT-03 Consultar cat&amp;aacute;logo y producto de Cinturones ({id=03, modulo=Cinturones, ruta=cinturones-mujer}) (completed)" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="5df3f30539290aa03ee780e4bfd7a0245fc3c0dbd0f7695cd82ca89e1cd3c6ad.png" title=" 4: CAT-04 Consultar cat&amp;aacute;logo y producto de Accesorios ({id=04, modulo=Accesorios, ruta=accesorios-mujer})" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="5df3f30539290aa03ee780e4bfd7a0245fc3c0dbd0f7695cd82ca89e1cd3c6ad.png" title=" Dado que se consulta el cat&amp;aacute;logo &amp;quot;accesorios-mujer&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="ca4c808f312495001bae2578946a2cfc6f95f640b90f288055d6ab15010bcaf9.png" title=" Entonces un producto del cat&amp;aacute;logo conserva nombre precio e imagen en su ficha" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="ca4c808f312495001bae2578946a2cfc6f95f640b90f288055d6ab15010bcaf9.png" title=" 4: CAT-04 Consultar cat&amp;aacute;logo y producto de Accesorios ({id=04, modulo=Accesorios, ruta=accesorios-mujer}) (completed)" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="d2814c5d174189590bb97953714f4a156f27245faad0198553fc6de1dcbfd90a.png" title=" 5: CAT-05 Consultar cat&amp;aacute;logo y producto de Outlet ({id=05, modulo=Outlet, ruta=outlet})" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="d2814c5d174189590bb97953714f4a156f27245faad0198553fc6de1dcbfd90a.png" title=" Dado que se consulta el cat&amp;aacute;logo &amp;quot;outlet&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="ab8c33053ce45636f3022d6b6c6289a2b71d7fde48b6df22ffaa417a2f280344.png" title=" Entonces un producto del catálogo conserva nombre precio e imagen en su ficha: &lt;span class=&#39;error-color&#39;&gt;ERROR&lt;/span&gt;" width="0" />
+                </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 5.3.8</span>
+</div>
+</body>
+</html>

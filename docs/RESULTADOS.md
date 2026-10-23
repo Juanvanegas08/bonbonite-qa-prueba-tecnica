@@ -58,3 +58,19 @@ Se compiló y ejecutó una copia limpia del código: `mvn clean verify` seleccio
 Se revisaron las seis pestañas del Excel, las capturas reales, la concordancia de los resultados con Cucumber JSON y los archivos de los reportes. Se retiraron enlaces opcionales CSV sin archivo de destino mediante `tools/finalize-report.ps1`, sin modificar los resultados de ejecución. La compra real continúa parcial y BUG-01 continúa abierto.
 
 El Excel incorpora las capturas de registro, carrito y checkout, y sustituye las referencias abreviadas de evidencia por enlaces descriptivos. El índice de cada escenario permite abrir resultados, acta, defectos y carpeta de Serenity. Se explica cómo descargar y abrir el HTML interactivo. Esta mejora de presentación conserva los resultados de las ejecuciones anteriores.
+
+
+## Cobertura complementaria ejecutada por módulos
+
+- CAT-01 Consultar catálogo y producto de Zapatos: **APROBADO**.
+- CAT-02 Consultar catálogo y producto de Bolsos: **APROBADO**.
+- CAT-03 Consultar catálogo y producto de Cinturones: **APROBADO**.
+- CAT-04 Consultar catálogo y producto de Accesorios: **APROBADO**.
+- CAT-05 Consultar catálogo y producto de Outlet: **FALLIDO**.
+- PQ-01 Correo inválido y opciones de solicitud PQRS: **FALLIDO**.
+- BO-01 Selección de denominación de bono: **FALLIDO**.
+- AC-01 Acceso y registro Mi cuenta Account: **FALLIDO**.
+
+Evidencia: evidencias/Modulos/cucumber.json y evidencias/Modulos/serenity/index.html. Selección @modulos, comercio real sin sesión. Son pruebas acotadas, no regresión exhaustiva. La compra principal continúa parcial y el alta Java nueva no se ha validado con otra cuenta.
+
+Durante la secuencia complementaria se observó 403 Forbidden al abrir una ficha desde Outlet (captura en Serenity). Los cuatro últimos casos no completaron las verificaciones. Su ejecución figura fallida, sin atribuir defecto funcional confirmado. Se requiere acceso permitido y diagnóstico antes de aprobarlos.

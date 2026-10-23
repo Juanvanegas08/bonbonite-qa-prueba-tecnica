@@ -18,6 +18,14 @@ La prueba funcional de perfil detectó un defecto: un género inicialmente vací
 
 La DEMO local se conserva como soporte para practicar los tres flujos completos con pago ficticio. Sus resultados se distinguen de las ejecuciones reales.
 
+## Cobertura complementaria por módulos
+
+Se añadieron ocho casos sobre el comercio real en `modulos.feature`. Ejecutar `powershell -ExecutionPolicy Bypass -File .\tools\run.ps1 -Modo Modulos`. No requieren credenciales. El reporte y resultados medidos están en `evidencias/Modulos/serenity/index.html` y `evidencias/Modulos/cucumber.json`. El Excel incorpora una pestaña por cada caso (M1–M8).
+
+Zapatos, Bolsos, Cinturones, Accesorios y Outlet: abrir una ficha desde el catálogo y comprobar nombre, precio numérico e imagen. PQRS: opciones de solicitud y validación HTML de correo inválido, sin radicar solicitudes. Bonos: selección de denominación con resolución de variante, sin compra ni redención. Mi cuenta/Account: controles de acceso y registro; el acceso autenticado y perfil se mantienen en CP01/CP02. Account es el nombre alternativo de Mi cuenta, no se inventa un módulo independiente.
+
+Esta cobertura prueba las funciones indicadas. No garantiza todos los filtros, productos, pagos ni reglas de cada módulo. El alta Java nueva sigue sin reejecutarse con datos únicos; la compra completa sigue pendiente. No se crean cuentas adicionales ni pedidos para obtener resultados verdes.
+
 ## Ejecutar en Windows
 
 `mvn clean verify` ejecuta por defecto solo los tres escenarios de la DEMO local. Las pruebas del comercio real y el registro de otra cuenta se seleccionan expresamente con sus etiquetas y precondiciones. No necesitan credenciales para revisar la DEMO.

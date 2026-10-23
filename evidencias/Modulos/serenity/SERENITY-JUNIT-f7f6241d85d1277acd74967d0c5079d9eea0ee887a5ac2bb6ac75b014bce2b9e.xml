@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="3" failures="1" name="Cobertura complementaria de módulos reales" skipped="0" tests="8" time="227.27" timestamp="2026-10-23 06:33:34"><testcase name="CAT-&lt;id&gt; Consultar catálogo y producto de &lt;modulo&gt;"><error message="Expected condition failed: waiting for visibility of element found by By.cssSelector: h1.product_title, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;h1.product_title&quot;}.&#13;&#10;(tried for 25 seconds with 500 milliseconds interval)&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for visibility of element found by By.cssSelector: h1.product_title, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"h1.product_title"}.&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for visibility of element found by By.cssSelector: h1.product_title, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"h1.product_title"}.&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown&#13;
+co.juanvanegas.qa.steps.ModuleSteps.product(ModuleSteps.java:16)&#13;
+✽.un producto del catálogo conserva nombre precio e imagen en su ficha(classpath:features/modulos.feature:6)&#13;
+</system-err></testcase><testcase name="PQ-01 Correo inválido y opciones de solicitud PQRS"><error message="Expected condition failed: waiting for presence of element found by By.cssSelector: select[name='select-3']&#13;&#10;(tried for 25 seconds with 500 milliseconds interval)&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for presence of element found by By.cssSelector: select[name='select-3']&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for presence of element found by By.cssSelector: select[name='select-3']&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown&#13;
+co.juanvanegas.qa.steps.ModuleSteps.validation(ModuleSteps.java:22)&#13;
+✽.el correo inválido no cumple la validación y existen tipos de solicitud(classpath:features/modulos.feature:17)&#13;
+</system-err></testcase><testcase name="BO-01 Selección de denominación de bono"><error message="Expected condition failed: waiting for co.juanvanegas.qa.steps.ModuleSteps$$Lambda/0x000001da584acd48@120d6cbf&#13;&#10;(tried for 25 seconds with 500 milliseconds interval)&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for co.juanvanegas.qa.steps.ModuleSteps$$Lambda/0x000001da584acd48@120d6cbf&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for co.juanvanegas.qa.steps.ModuleSteps$$Lambda/0x000001da584acd48@120d6cbf&#13;
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: driver.version: unknown&#13;
+co.juanvanegas.qa.steps.ModuleSteps.variant(ModuleSteps.java:30)&#13;
+✽.seleccionar una denominación resuelve su variante(classpath:features/modulos.feature:21)&#13;
+</system-err></testcase><testcase name="AC-01 Acceso y registro Mi cuenta Account"><failure message="&#13;&#10;Expected: an element that is clickable&#13;&#10;     but: no matching element found by [enlace de registro located with: css: #show_register] was not clickable" type="java.lang.AssertionError">&#13;
+Expected: an element that is clickable&#13;
+     but: no matching element found by [enlace de registro located with: css: #show_register] was not clickable</failure><system-err>&#13;
+Expected: an element that is clickable&#13;
+     but: no matching element found by [enlace de registro located with: css: #show_register] was not clickable&#13;
+co.juanvanegas.qa.steps.StoreSteps.publicRegister(StoreSteps.java:79)&#13;
+</system-err></testcase></testsuite>

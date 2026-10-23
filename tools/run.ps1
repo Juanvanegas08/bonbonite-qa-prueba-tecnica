@@ -1,4 +1,4 @@
-﻿param([ValidateSet('Demo','Publico','Real','Compilar')][string]$Modo='Demo')
+﻿param([ValidateSet('Demo','Publico','Real','Modulos','Compilar')][string]$Modo='Demo')
 $ErrorActionPreference='Stop'
 $projectRoot=Split-Path $PSScriptRoot -Parent
 $qaTools=Join-Path $env:LOCALAPPDATA 'Programs\QA-Tools'
@@ -11,7 +11,7 @@ $maven=if(Test-Path $localMaven){$localMaven}else{(Get-Command mvn.cmd -ErrorAct
 Push-Location $projectRoot
 try {
     if($Modo -eq 'Compilar'){ & $maven '-B' 'test-compile'; if($LASTEXITCODE -ne 0){throw 'No se pudo compilar'};return }
-    $tag=switch($Modo){'Demo'{'@e2e'} 'Publico'{'@publico'} 'Real'{'@real'}}
+    $tag=switch($Modo){'Demo'{'@e2e'} 'Publico'{'@publico'} 'Real'{'@real'} 'Modulos'{'@modulos'}}
     $extra=@()
     if($Modo -eq 'Real'){
         if(!$env:QA_LOGIN -or !$env:QA_PASSWORD){throw 'Configura QA_LOGIN y QA_PASSWORD como variables de entorno antes del modo Real.'}

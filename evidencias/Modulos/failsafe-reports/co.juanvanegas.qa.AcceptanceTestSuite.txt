@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: co.juanvanegas.qa.AcceptanceTestSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 1, Errors: 3, Skipped: 8, Time elapsed: 143.9 s <<< FAILURE! -- in co.juanvanegas.qa.AcceptanceTestSuite
+co.juanvanegas.qa.AcceptanceTestSuite.Example #1.5: CAT-05 Consultar catálogo y producto de Outlet -- Time elapsed: 29.16 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element found by By.cssSelector: h1.product_title, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"h1.product_title"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at co.juanvanegas.qa.steps.ModuleSteps.product(ModuleSteps.java:16)
+	at ✽.un producto del catálogo conserva nombre precio e imagen en su ficha(classpath:features/modulos.feature:6)
+
+co.juanvanegas.qa.AcceptanceTestSuite.PQ-01 Correo inválido y opciones de solicitud PQRS -- Time elapsed: 26.75 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for presence of element found by By.cssSelector: select[name='select-3']
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at co.juanvanegas.qa.steps.ModuleSteps.validation(ModuleSteps.java:22)
+	at ✽.el correo inválido no cumple la validación y existen tipos de solicitud(classpath:features/modulos.feature:17)
+
+co.juanvanegas.qa.AcceptanceTestSuite.BO-01 Selección de denominación de bono -- Time elapsed: 26.73 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for co.juanvanegas.qa.steps.ModuleSteps$$Lambda/0x000001da584acd48@120d6cbf
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at co.juanvanegas.qa.steps.ModuleSteps.variant(ModuleSteps.java:30)
+	at ✽.seleccionar una denominación resuelve su variante(classpath:features/modulos.feature:21)
+
+co.juanvanegas.qa.AcceptanceTestSuite.AC-01 Acceso y registro Mi cuenta Account -- Time elapsed: 32.19 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expected: an element that is clickable
+     but: no matching element found by [enlace de registro located with: css: #show_register] was not clickable
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:39)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:33)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:34)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:254)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.juanvanegas.qa.steps.StoreSteps.publicRegister(StoreSteps.java:79)
+	at ✽.que Juan consulta el formulario público de registro(classpath:features/modulos.feature:24)
+
