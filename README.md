@@ -20,6 +20,8 @@ La DEMO local se conserva como soporte para practicar los tres flujos completos 
 
 ## Cobertura complementaria por módulos
 
+Estado más reciente: ocho casos con ejecución aprobada en dos tandas. CAT-01–CAT-04 en `evidencias/Modulos`; CAT-05, PQ-01, BO-01 y AC-01 en `evidencias/ModulosRevalidacion`, con BUILD SUCCESS tras recuperar acceso. El reporte original conserva los rechazos 403 observados; consulte `docs/RESULTADOS.md` para la cronología. Las pestañas M1–M8 enlazan el reporte correspondiente.
+
 Se añadieron ocho casos sobre el comercio real en `modulos.feature`. Ejecutar `powershell -ExecutionPolicy Bypass -File .\tools\run.ps1 -Modo Modulos`. No requieren credenciales. El reporte y resultados medidos están en `evidencias/Modulos/serenity/index.html` y `evidencias/Modulos/cucumber.json`. El Excel incorpora una pestaña por cada caso (M1–M8).
 
 Zapatos, Bolsos, Cinturones, Accesorios y Outlet: abrir una ficha desde el catálogo y comprobar nombre, precio numérico e imagen. PQRS: opciones de solicitud y validación HTML de correo inválido, sin radicar solicitudes. Bonos: selección de denominación con resolución de variante, sin compra ni redención. Mi cuenta/Account: controles de acceso y registro; el acceso autenticado y perfil se mantienen en CP01/CP02. Account es el nombre alternativo de Mi cuenta, no se inventa un módulo independiente.

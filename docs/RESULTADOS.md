@@ -74,3 +74,12 @@ El Excel incorpora las capturas de registro, carrito y checkout, y sustituye las
 Evidencia: evidencias/Modulos/cucumber.json y evidencias/Modulos/serenity/index.html. Selección @modulos, comercio real sin sesión. Son pruebas acotadas, no regresión exhaustiva. La compra principal continúa parcial y el alta Java nueva no se ha validado con otra cuenta.
 
 Durante la secuencia complementaria se observó 403 Forbidden al abrir una ficha desde Outlet (captura en Serenity). Los cuatro últimos casos no completaron las verificaciones. Su ejecución figura fallida, sin atribuir defecto funcional confirmado. Se requiere acceso permitido y diagnóstico antes de aprobarlos.
+
+
+## Revalidación posterior de los cuatro casos pendientes
+
+El servidor volvió a permitir el acceso. Se ejecutaron CAT-05, PQ-01, BO-01 y AC-01: **4/4 aprobados, BUILD SUCCESS**. Reporte: `evidencias/ModulosRevalidacion/serenity/index.html`; resultados originales: `evidencias/ModulosRevalidacion/cucumber.json`.
+
+Con CAT-01 a CAT-04 aprobados en la ejecución anterior, los ocho casos complementarios tienen una ejecución aprobada. Las pestañas M1–M4 remiten al primer reporte y M5–M8 al de revalidación. No se presenta esto como una sola ejecución de ocho casos. El reporte inicial fallido se conserva como historial. No certifica todas las funciones internas de cada módulo.
+
+La compra completa y la ejecución Java de un alta nueva siguen pendientes: no se creó una orden ni otra cuenta. La creación inicial de la cuenta y su reingreso sí están documentados.

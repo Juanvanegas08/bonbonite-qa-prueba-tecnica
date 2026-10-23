@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.juanvanegas.qa.AcceptanceTestSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 12, Time elapsed: 26.63 s -- in co.juanvanegas.qa.AcceptanceTestSuite

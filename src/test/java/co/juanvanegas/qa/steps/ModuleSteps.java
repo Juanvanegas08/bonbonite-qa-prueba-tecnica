@@ -5,14 +5,20 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
 public class ModuleSteps {
  @Managed(driver="chrome") WebDriver browser;
  private WebDriverWait waitFor(){return new WebDriverWait(browser,Duration.ofSeconds(25));}
- private void open(String path){browser.get("https://www.bon-bonite.com/"+path);}
+ private void requireAccessible(){
+  String text=browser.findElement(By.tagName("body")).getText();
+  assumeFalse(text.contains("403 Forbidden"),"BLOQUEADO: el servidor devuelve 403 Forbidden. No es un fallo funcional ni de selector; requiere acceso permitido.");
+ }
+ private void open(String path){browser.get("https://www.bon-bonite.com/"+path);requireAccessible();}
  @Dado("que se consulta el catálogo {string}") public void catalog(String path){open("categoria-producto/"+path+"/");}
  @Entonces("un producto del catálogo conserva nombre precio e imagen en su ficha") public void product(){
   var product=waitFor().until(d->d.findElements(By.cssSelector(".product-wrapper-with-variation > a[href*='/producto/']")).stream().filter(WebElement::isDisplayed).findFirst().orElse(null));
   browser.get(product.getDomAttribute("href"));
+  requireAccessible();
   assertFalse(waitFor().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1.product_title"))).getText().isBlank());
   assertTrue(browser.findElement(By.cssSelector("p.price")).getText().matches("(?s).*\\d.*"));
   assertFalse(browser.findElements(By.cssSelector("img.product_img")).isEmpty());
